@@ -3,107 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau Fundamentals Course</title>
+    <title>Course Tracker</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
         }
-        h1 {
-            color: #333;
-            text-align: center;
+        .tab {
+            overflow: hidden;
+            border-bottom: 2px solid #ccc;
+        }
+        .tab button {
+            background-color: #f2f2f2;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: white;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
+            border: 1px solid black;
+            padding: 8px;
             text-align: left;
         }
         th {
-            background-color: #007bff;
-            color: white;
+            background-color: #f2f2f2;
         }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+        .subtopic {
+            padding-left: 20px;
+            font-style: italic;
         }
     </style>
-	<style>
-    .logo {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 150px;
-    }
-</style>
-<img src="Downloads/Tableau-Logo.png" alt="Tableau Logo" class="logo">
 </head>
 <body>
 
-    <h1>Tableau Fundamentals Course</h1>
+    <h1>Course Tracker</h1>
 
-    <table>
-        <tr>
-            <th>Date</th>
-            <th>Course</th>
-            <th>Status</th>
-        </tr>
-        <tr>
-            <td>2025-02-10</td>
-            <td>Connect to and Customize Data</td>
-            <td>In Progress</td>
-        </tr>
-        <tr>
-            <td>2025-02-12</td>
-            <td>Organize Data and Create Filters</td>
-            <td>Not Started</td>
-        </tr>
-        <tr>
-            <td>2025-02-15</td>
-            <td>Build Common Views</td>
-            <td>Not Started</td>
-        </tr>
-        <tr>
-            <td>2025-02-18</td>
-            <td>Map Geographic Data</td>
-            <td>Not Started</td>
-        </tr>
-        <tr>
-            <td>2025-02-20</td>
-            <td>Create Calculated Fields</td>
-            <td>Not Started</td>
-        </tr>
-        <tr>
-            <td>2025-02-22</td>
-            <td>Apply Table Calculations</td>
-            <td>Not Started</td>
-        </tr>
-        <tr>
-            <td>2025-02-24</td>
-            <td>Apply Analytics</td>
-            <td>Not Started</td>
-        </tr>
-        <tr>
-            <td>2025-02-26</td>
-            <td>Work with Multiple Data Sources</td>
-            <td>Not Started</td>
-        </tr>
-        <tr>
-            <td>2025-02-28</td>
-            <td>Create Dashboards and Stories</td>
-            <td>Not Started</td>
-        </tr>
-        <tr>
-            <td>2025-03-02</td>
-            <td>Share and Publish Content</td>
-            <td>Not Started</td>
-        </tr>
-    </table>
+    <!-- Tab Buttons -->
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Ignition')">Ignition</button>
+        <button class="tablinks" onclick="openTab(event, 'Tableau')">Tableau</button>
+    </div>
+
+    <!-- Ignition Tab -->
+    <div id="Ignition" class="tabcontent" style="display: block;">
+        <h2>Ignition Core Certification</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Course</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>2025-02-09</td>
+                <td><strong>1. Getting Started</strong></td>
+                <td>
+                    <select>
+                        <option>Not Started</option>
+                        <option>In Progress</option>
+                        <option>Closed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="subtopic">Ignition Overview</td>
+                <td>
+                    <select>
+                        <option>Not Started</option>
+                        <option>In Progress</option>
+                        <option>Closed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="subtopic">Ignition Editions</td>
+                <td>
+                    <select>
+                        <option>Not Started</option>
+                        <option>In Progress</option>
+                        <option>Closed</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Tableau Tab -->
+    <div id="Tableau" class="tabcontent">
+        <h2>Tableau Fundamentals</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Course</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>2025-02-09</td>
+                <td><strong>1. Connect to and Customize Data</strong></td>
+                <td>
+                    <select>
+                        <option>0%</option>
+                        <option>25%</option>
+                        <option>50%</option>
+                        <option>75%</option>
+						<option>100%</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="subtopic">Connecting to Data</td>
+                <td>
+                    <select>
+                        <option>Not Started</option>
+                        <option>In Progress</option>
+                        <option>Closed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="subtopic">Customizing a Data Source</td>
+                <td>
+                    <select>
+                        <option>Not Started</option>
+                        <option>In Progress</option>
+                        <option>Closed</option>
+                    </select>
+                </td>
+            </tr>
+           <tr>
+                <td></td>
+                <td class="subtopic">Working with a Data Extract</td>
+                <td>
+                    <select>
+                        <option>Not Started</option>
+                        <option>In Progress</option>
+                        <option>Closed</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 
 </body>
 </html>
+ ikvmn 
